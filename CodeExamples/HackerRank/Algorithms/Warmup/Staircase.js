@@ -10,6 +10,14 @@
  */
 function staircase(n) {
   for (let i = 1; i <= n; i++) {
-    console.log(" ".repeat(n - i) + "#".repeat(i) + " ".repeat(n - i));
+    console.log(" ".repeat(n - i) + "#".repeat(i));
   }
 }
+
+const step =
+  Array(n - i)
+    .fill(" ")
+    .join("") + Array(i).fill("#").join("");
+
+const repeat = (str, num) => new Array(num).fill(str).join("");
+console.log(repeat(" ", n - 1) + repeat("#", i));
