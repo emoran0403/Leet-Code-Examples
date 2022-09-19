@@ -67,4 +67,30 @@ function sillyGame(n) {
 // ==> bob wins when there are an even number of primes < n
 // ==> alice wins when there are an odd number of primes < n
 
-//@ try the regex for primes approach here
+//@ returns true if the number entered is prime
+function isPrime(n) {
+  const regex = /^1?$|^(11+?)\1+$/;
+  return !"1".repeat(n).match(regex);
+}
+
+function sillyGame2(n) {
+  const regex = /^1?$|^(11+?)\1+$/;
+  let primeArray = [1];
+  for (let i = 2; i < n; i++) {
+    let wow = !"1".repeat(i).match(regex);
+
+    if (wow) {
+      primeArray.push(`${i}`);
+    }
+  }
+
+  if (primeArray.length % 2 === 0) {
+    //the length is even, thus alice wins
+    console.log(`Alice`);
+  } else {
+    // the length is odd, thus bob wins
+    console.log(`Bob`);
+  }
+}
+
+sillyGame2(3);
