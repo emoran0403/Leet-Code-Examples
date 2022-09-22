@@ -4,9 +4,16 @@ function getSum(a, b) {
   // declare the low and high numbers
   let low, high;
 
-  // define the low and high numbers, returning early with a if they are equal
+  // define the low and high numbers
   if (a === b) {
+    // returning early with a if they are equal
     return a;
+  } else if (a > 1 && b > 1) {
+    // if a & b are positive, then we can quickly calculate the sum of an arithmetic sequence
+    // n = number of terms to be added
+    const n = Math.abs(a - b) + 1;
+    return n * ((a + b) / 2);
+    // if the above conditions are not met, then we can fill an array and reduce it
   } else if (a < b) {
     low = a;
     high = b;
@@ -19,7 +26,7 @@ function getSum(a, b) {
   let numberArray = [];
 
   // iterate over the range, pushing each number
-  for (let i = a; i <= b; i++) {
+  for (let i = low; i <= high; i++) {
     numberArray.push(i);
   }
 
@@ -27,12 +34,8 @@ function getSum(a, b) {
   const sum = numberArray.reduce((a, b) => a + b, 0);
 
   // return the sum
-  console.log(sum);
-  //   return sum;
+  // console.log(sum);
+  return sum;
 }
 
 getSum(0, 5);
-
-function getSum2(a, b) {
-  // sum of an arithmetic sequence
-}
