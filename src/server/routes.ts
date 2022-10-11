@@ -5,9 +5,9 @@ import * as Types from "../../Types";
 
 const router = express.Router();
 
-router.get("/api/hello", (req, res, next) => {
-  res.json("World");
-});
+// router.get("/api/hello", (req, res, next) => {
+//   res.json("World");
+// });
 
 router.get("/api/solutions", (req, res, next) => {
   const pathName = path.join(__dirname, "../CodeExamples/CodeWars/Finished/");
