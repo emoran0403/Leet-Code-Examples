@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript
+//@ 7
+
 function squareDigits(num) {
   // convert the number to a number string
   const numAsString = num.toString();

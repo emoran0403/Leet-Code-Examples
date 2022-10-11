@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
+//@ 7
+
 function getMiddle(s) {
   // define half the string length ==> this is where the middle of the string will be
   const halfStringLength = Math.floor(s.length / 2);

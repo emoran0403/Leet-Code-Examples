@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/526989a41034285187000de4/train/javascript
+//@ 5
 
 // 0.0.20.0
 // 255.255.255.255

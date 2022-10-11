@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/556deca17c58da83c00002db/train/javascript
+//@ 6
 
 function tribonacci(signature, n) {
   // account for edge cases in the test

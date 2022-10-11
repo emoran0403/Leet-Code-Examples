@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
+//@ 7
 
 function getSum(a, b) {
   // declare the low and high numbers

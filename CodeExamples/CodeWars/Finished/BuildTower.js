@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/javascript
+//@ 6
 
 function towerBuilder(nFloors) {
   // declare an empty array within which to push the floors of the tower

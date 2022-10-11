@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/530e15517bc88ac656000716/train/javascript
+//@ 5
 
 function rot13(message) {
   const ALPHABET_LOWER = [

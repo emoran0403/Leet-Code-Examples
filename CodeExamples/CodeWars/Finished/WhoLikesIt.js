@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript
+//@ 6
+
 function likes(names) {
   // evaluate the length of the given names, and conditionally return based on the length
   if (names.length === 0) {

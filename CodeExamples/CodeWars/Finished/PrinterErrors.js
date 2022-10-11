@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/56541980fa08ab47a0000040/train/javascript
+//@ 7
 
 function printerError(s) {
   // define the character code for m

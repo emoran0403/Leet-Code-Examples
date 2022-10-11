@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/514b92a657cdc65150000006/train/javascript
+//@ 6
+
 function solution(number) {
   // define an array to place the unique multiples of 3 and 5
   let multiples = [];

@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+//@ 6
 
 function findOdd(A) {
   // declare an empty object to serve as the histogram

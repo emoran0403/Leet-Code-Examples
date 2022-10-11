@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
+//@ 6
+
 // remove every element from a that matches any element in b
 function arrayDiff(a, b) {
   // a.filter returns a new array containing elements that return true for the given condition (this will be our return array)

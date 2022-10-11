@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/54da539698b8a2ad76000228/train/javascript
+//@ 6
 
 /**
  * to end at the starting point, each n must match with an s, likewise, each e must match with a w

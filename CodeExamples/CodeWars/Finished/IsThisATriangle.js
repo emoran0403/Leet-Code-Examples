@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/56606694ec01347ce800001b/train/javascript
+//@ 7
+
 function isTriangle(a, b, c) {
   // the sum of each pair of length of a possible triangle must be greater than the third side
 

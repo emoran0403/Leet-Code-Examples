@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/526571aae218b8ee490006f4/train/javascript
+//@ 6
+
 var countBits = function (n) {
   // converts a number to a string with the provided base
   const numString = n.toString(2);

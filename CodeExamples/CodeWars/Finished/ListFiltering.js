@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/javascript
+//@ 7
 
 function filter_list(l) {
   // declare an array to return, which will have only numbers pushed into it

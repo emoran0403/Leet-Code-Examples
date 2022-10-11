@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/javascript
+//@ 6
 
 //! the mathematical approach will not work without BigInt
 // function findNb(m) {

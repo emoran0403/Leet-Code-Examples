@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
+//@ 6
 
 function sortArray(array) {
   // declare an array to push the odd numbers into

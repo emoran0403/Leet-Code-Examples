@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript
+//@ 7
+
 function accum(s) {
   // split the string into single character entries in an array
   const splitSentence = s.split("");

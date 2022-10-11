@@ -1,6 +1,9 @@
+//@ https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+//@ 6
+
 function isPangram(string) {
-  //@ there are 26 letters in the alphabet, if we can reduce string to the number of unique letters,
-  //@ then we can determine if it contains the alphabet at least once.
+  // there are 26 letters in the alphabet, if we can reduce string to the number of unique letters,
+  // then we can determine if it contains the alphabet at least once.
 
   // define regex that matches only letters
   const regex = /[a-zA-Z]/g;

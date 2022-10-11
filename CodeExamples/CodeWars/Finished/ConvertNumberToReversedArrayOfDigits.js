@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/5583090cbe83f4fd8c000051/train/javascript
+//@ 8
 
 function digitize(n) {
   // produces an array of string numbers of the digits in the reverse order
@@ -20,5 +21,5 @@ digitize(35231);
 
 //!
 //? why did i need to make a new array to hold the numbers?
-//@ for each just calls some function on each element in the array, it doesn't manipulate the data
+//? for each just calls some function on each element in the array, it doesn't manipulate the data
 // a forEach calling Number(numString) | parseInt(numString) | +numString | ~~numString did not work :(

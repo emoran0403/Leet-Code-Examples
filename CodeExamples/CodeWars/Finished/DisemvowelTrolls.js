@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript
+//@ 7
+
 function disemvowel(str) {
   // define a list of vowels
   const vowels = ["a", "e", "i", "o", "u"];

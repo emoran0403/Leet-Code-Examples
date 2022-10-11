@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+//@ 7
 
 function longest(s1, s2) {
   // combine the letters from each array into an array, then make a set from that array

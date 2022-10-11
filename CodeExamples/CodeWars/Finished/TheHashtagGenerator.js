@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/52449b062fb80683ec000024/train/javascript
+//@ 5
 
 function generateHashtag(str) {
   // split the string on spaces to create an array of words

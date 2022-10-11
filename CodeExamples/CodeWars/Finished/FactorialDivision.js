@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/52f3a8e1f85fadcdf7001e31/train/javascript
+//@ 7
 
 // - n and d will be positive BigInts, and also n > d. No need to check any of that
 function factorialDivision(n, d) {

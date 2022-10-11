@@ -1,4 +1,5 @@
 //@ https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript
+//@ 5
 
 // Write a program that will calculate the number of trailing zeros in a factorial of a given number.
 function zeros(n) {
