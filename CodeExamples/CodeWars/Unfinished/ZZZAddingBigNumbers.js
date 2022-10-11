@@ -10,4 +10,4 @@ function add(a, b) {
   return sumAsString;
 }
 
-// big int is not supported, thus we have to re-create the summation algorithm
+//! big int is not supported, thus we have to re-create the summation algorithm
