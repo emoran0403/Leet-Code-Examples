@@ -1,3 +1,6 @@
+//@ https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/javascript
+//@ 7
+
 function getCount(str) {
   // define vowels
   let vowels = ["a", "e", "i", "o", "u"];
