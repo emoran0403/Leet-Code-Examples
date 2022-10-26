@@ -39,7 +39,7 @@ router.get("/api/solutions", (req, res, next) => {
       });
 
       res.status(200).json(fileArray);
-      console.log({ files, fileArray });
+      // console.log({ files, fileArray });
     }
   });
 });

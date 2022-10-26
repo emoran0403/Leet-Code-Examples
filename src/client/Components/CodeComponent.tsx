@@ -4,6 +4,7 @@ import { tomorrowNightBright } from "react-syntax-highlighter/dist/esm/styles/hl
 import * as Types from "../../../Types";
 
 const CodeComponent = (props: Types.CodeComponent) => {
+  console.log(props.codeString);
   return (
     <div>
       <SyntaxHighlighter language="javascript" style={tomorrowNightBright}>
