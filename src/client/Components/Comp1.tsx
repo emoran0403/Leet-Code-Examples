@@ -6,16 +6,14 @@ import CodeComponent from "./CodeComponent";
 const SomeComp = (props: Types.CompProps) => {
   const EMPTYFILE = { title: "", codeString: "", link: "" };
   const [codeArray, setCodeArray] = useState<Types.fileInfo[]>([EMPTYFILE]);
-  // const [codeString, setCodeString] = useState<string>("");
 
+  /**
+   * This useEffect fetches all solutions and sets them to state
+   */
   useEffect(() => {
-    // { title: string; content: string; link: string }[]
-
     fetch("/api/solutions")
       .then((res) => {
         return res.json();
-        // res is an array of files names
-        // return res.text();
       })
       .then((res) => {
         console.log({ res });
@@ -28,12 +26,15 @@ const SomeComp = (props: Types.CompProps) => {
 
   return (
     <main className="container my-5">
-      <div>This is where the entire code exmaple would go, with the code solution below</div>
-      <div>example title</div>
+      <div>This is where the entire code example would go, with the code solution below</div>
       <div>example link</div>
       <div>
         {codeArray.map((file, i) => (
-          <CodeComponent key={i} codeString={file.codeString} />
+          <div>
+            <div>{file.title}</div>
+            <div>{file.link}</div>
+            <CodeComponent key={i} codeString={file.codeString} />
+          </div>
         ))}
       </div>
       <div>I should see code above lol</div>
