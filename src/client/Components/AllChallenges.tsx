@@ -2,9 +2,14 @@ import * as React from "react";
 import * as Types from "../../../Types";
 import { useState, useEffect } from "react";
 import CodeComponent from "./CodeComponent";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+{
+  /* <ReactMarkdown children={file.description} remarkPlugins={[remarkGfm]} /> */
+}
 
 const SomeComp = (props: Types.CompProps) => {
-  const EMPTYFILE = { title: "", codeString: "", link: "", challengeID: "", rank: "" };
+  const EMPTYFILE = { title: "", codeString: "", link: "", challengeID: "", rank: "", description: "" };
   const [codeArray, setCodeArray] = useState<Types.fileInfo[]>([EMPTYFILE]);
 
   /**
@@ -30,17 +35,12 @@ const SomeComp = (props: Types.CompProps) => {
       <div>example link</div>
       <div>
         {codeArray.map((file, i) => (
-          <div>
+          <div key={i}>
             <div>{file.title}</div>
             <div>{file.link}</div>
-            <div>
-              {
-                "You are given the `length` and `width` of a 4-sided polygon. The polygon can either be a rectangle or a square.  \nIf it is a square, return its area. If it is a rectangle, return its perimeter.\n\n**Example(Input1, Input2 --> Outut):**\n```\n6, 10 --> 32\n3, 3 --> 9\n```\n\n**Note:** for the purposes of this kata you will assume that it is a square if its `length` and `width` are equal, otherwise it is a rectangle.\n"
-              }
-            </div>
             <div>ID: {file.challengeID}</div>
             <div>Rank: {file.rank}</div>
-            <CodeComponent key={i} codeString={file.codeString} />
+            <CodeComponent codeString={file.codeString} />
           </div>
         ))}
       </div>

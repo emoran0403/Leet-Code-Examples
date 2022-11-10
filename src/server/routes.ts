@@ -15,7 +15,7 @@ router.get("/api/solutions", (req, res, next) => {
     } else {
       let fileArray: Types.fileInfo[] = [];
 
-      files.forEach((file) => {
+      for (const file of files) {
         // transform the title to something more readable by adding spaces in front of capitals, and removing the .js file extension
         const title = file
           .replace(/([a-z])([A-Z])/g, "$1 $2")
@@ -36,10 +36,15 @@ router.get("/api/solutions", (req, res, next) => {
         // grab the rank from the secondLine
         const rank = secondLine.replace("//@ ", "");
 
-        // build the response object and push it into the array
-        fileArray.push({ title, codeString, link: file, challengeID, rank });
-      });
+        // grab the description from a fetch to the codewars API
 
+        const info: Types.fileInfo = { title, codeString, link: file, challengeID, rank };
+
+        // push the response object into the array
+        fileArray.push(info);
+      }
+
+      console.log({ fileArray });
       res.status(200).json(fileArray);
       // console.log({ files, fileArray });
     }
