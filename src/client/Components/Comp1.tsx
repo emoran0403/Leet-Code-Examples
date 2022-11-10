@@ -33,6 +33,11 @@ const SomeComp = (props: Types.CompProps) => {
           <div>
             <div>{file.title}</div>
             <div>{file.link}</div>
+            <div>
+              {
+                "You are given the `length` and `width` of a 4-sided polygon. The polygon can either be a rectangle or a square.  \nIf it is a square, return its area. If it is a rectangle, return its perimeter.\n\n**Example(Input1, Input2 --> Outut):**\n```\n6, 10 --> 32\n3, 3 --> 9\n```\n\n**Note:** for the purposes of this kata you will assume that it is a square if its `length` and `width` are equal, otherwise it is a rectangle.\n"
+              }
+            </div>
             <div>ID: {file.challengeID}</div>
             <div>Rank: {file.rank}</div>
             <CodeComponent key={i} codeString={file.codeString} />
