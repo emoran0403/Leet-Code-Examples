@@ -8,4 +8,6 @@ export interface fileInfo {
   title: string;
   codeString: string;
   link: string;
+  challengeID: string;
+  rank: string;
 }

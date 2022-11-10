@@ -1,4 +1,4 @@
-//@ https://www.codewars.com/kata/550498447451fbbd7600041c/javascript
+//@ https://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
 //@ 6
 
 // {} [] gotta bang the property

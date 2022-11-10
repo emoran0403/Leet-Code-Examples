@@ -25,13 +25,19 @@ router.get("/api/solutions", (req, res, next) => {
         const codeString = fs.readFileSync(path.join(pathName, file)).toString();
 
         // grab the first line, which has the link to the example on codewars website
-        const firstLine = codeString.split("\n")[0];
+        const [firstLine, secondLine] = codeString.split("\n");
 
-        //! need to trim out the '//@ ' at the beginning, so the rest of the line is just the url
-        // then slap that into the object below
+        // grab the challengeID from the first line
+        const challengeID = firstLine
+          .replace("//@ https://www.codewars.com/kata/", "")
+          .replace("/javascript", "")
+          .replace("/train", "");
+
+        // grab the rank from the secondLine
+        const rank = secondLine.replace("//@ ", "");
 
         // build the response object and push it into the array
-        fileArray.push({ title, codeString, link: file });
+        fileArray.push({ title, codeString, link: file, challengeID, rank });
       });
 
       res.status(200).json(fileArray);

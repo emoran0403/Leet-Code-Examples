@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CodeComponent from "./CodeComponent";
 
 const SomeComp = (props: Types.CompProps) => {
-  const EMPTYFILE = { title: "", codeString: "", link: "" };
+  const EMPTYFILE = { title: "", codeString: "", link: "", challengeID: "", rank: "" };
   const [codeArray, setCodeArray] = useState<Types.fileInfo[]>([EMPTYFILE]);
 
   /**
@@ -33,6 +33,8 @@ const SomeComp = (props: Types.CompProps) => {
           <div>
             <div>{file.title}</div>
             <div>{file.link}</div>
+            <div>ID: {file.challengeID}</div>
+            <div>Rank: {file.rank}</div>
             <CodeComponent key={i} codeString={file.codeString} />
           </div>
         ))}
