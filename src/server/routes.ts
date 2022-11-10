@@ -29,9 +29,13 @@ router.get("/api/solutions", (req, res, next) => {
 
         // grab the challengeID from the first line
         const challengeID = firstLine
-          .replace("//@ https://www.codewars.com/kata/", "")
+          .replace("//@", "")
+          .replace(/\s+/g, "")
+          .replace("https://www.codewars.com/kata/", "")
           .replace("/javascript", "")
           .replace("/train", "");
+
+        //@  https://www.codewars.com/kata/5839edaa6754d6fec10000a2
 
         // grab the rank from the secondLine
         const rank = secondLine.replace("//@ ", "");
@@ -44,7 +48,7 @@ router.get("/api/solutions", (req, res, next) => {
         fileArray.push(info);
       }
 
-      console.log({ fileArray });
+      // console.log({ fileArray });
       res.status(200).json(fileArray);
       // console.log({ files, fileArray });
     }

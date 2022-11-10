@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import CodeComponent from "./CodeComponent";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Link } from "react-router-dom";
 {
   /* <ReactMarkdown children={file.description} remarkPlugins={[remarkGfm]} /> */
 }
@@ -21,7 +22,7 @@ const SomeComp = (props: Types.CompProps) => {
         return res.json();
       })
       .then((res) => {
-        console.log({ res });
+        // console.log({ res });
         setCodeArray(res);
       })
       .catch((err) => {
@@ -36,10 +37,12 @@ const SomeComp = (props: Types.CompProps) => {
       <div>
         {codeArray.map((file, i) => (
           <div key={i}>
-            <div>{file.title}</div>
-            <div>{file.link}</div>
-            <div>ID: {file.challengeID}</div>
-            <div>Rank: {file.rank}</div>
+            <Link className="btn btn-primary" to={`/challenges/${file.challengeID}`}>
+              <span>
+                {file.rank} {file.title}
+              </span>
+            </Link>
+
             <CodeComponent codeString={file.codeString} />
           </div>
         ))}

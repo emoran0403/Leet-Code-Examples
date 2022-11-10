@@ -7,7 +7,7 @@ import * as Types from "../../../Types";
 const CodeComponent = (props: Types.CodeComponent) => {
   //lines of code
   const lines = props.codeString.split("\n").length;
-  console.log(lines);
+  // console.log(lines);
 
   // set the toggle based on whether or not there are more than 10 lines of code
   const [height, setHeight] = useState<"225.6px" | "auto">(lines > 10 ? "225.6px" : "auto");
@@ -22,8 +22,13 @@ const CodeComponent = (props: Types.CodeComponent) => {
     }
   };
 
+  // allows us to style for the all challenges view or the details view
+  const getStyle = () => {
+    return props.isDetails ? {} : { minHeight: height, height: height, overflowY: overflowY };
+  };
+
   return (
-    <div style={{ minHeight: height, height: height, overflowY: overflowY }} onClick={handleScroller}>
+    <div style={getStyle()} onClick={handleScroller}>
       <SyntaxHighlighter style={tomorrowNightBright} language="javascript">
         {props.codeString}
       </SyntaxHighlighter>
