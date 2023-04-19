@@ -10,8 +10,6 @@ import Details from "./Components/Details";
 const App = (props: Types.AppProps) => {
   return (
     <main className="container my-5">
-      <div>This is App</div>
-
       <Routes>
         <Route path="/" element={<AllChallenges />} />
         <Route path="/challenges/:challengeID" element={<Details />} />

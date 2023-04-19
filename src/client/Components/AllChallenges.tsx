@@ -14,7 +14,7 @@ const SomeComp = (props: Types.CompProps) => {
   const [codeArray, setCodeArray] = useState<Types.fileInfo[]>([EMPTYFILE]);
 
   /**
-   * This useEffect fetches all solutions and sets them to state
+   * This useEffect fetches all solutions, sorts them on descending diffculty, and sets them to state
    */
   useEffect(() => {
     fetch("/api/solutions")
@@ -23,6 +23,9 @@ const SomeComp = (props: Types.CompProps) => {
       })
       .then((res) => {
         // console.log({ res });
+        res.sort((fileA: Types.fileInfo, fileB: Types.fileInfo) => {
+          return Number(fileA.rank[0]) - Number(fileB.rank[0]);
+        });
         setCodeArray(res);
       })
       .catch((err) => {
@@ -32,22 +35,24 @@ const SomeComp = (props: Types.CompProps) => {
 
   return (
     <main className="container my-5">
-      <div>This is where the entire code example would go, with the code solution below</div>
-      <div>example link</div>
       <div>
         {codeArray.map((file, i) => (
-          <div key={i}>
-            <Link className="btn btn-primary" to={`/challenges/${file.challengeID}`}>
-              <span>
-                {file.rank} {file.title}
-              </span>
-            </Link>
+          <div key={i} className="mb-3">
+            <div className="d-flex flex-row justify-content-between">
+              <div className="mx-3">
+                <div className="font-weight-bold">
+                  {file.rank} {file.title}
+                </div>
+              </div>
+              <Link className="btn btn-primary mb-2" to={`/challenges/${file.challengeID}`}>
+                View Details
+              </Link>
+            </div>
 
             <CodeComponent codeString={file.codeString} />
           </div>
         ))}
       </div>
-      <div>I should see code above lol</div>
     </main>
   );
 };
